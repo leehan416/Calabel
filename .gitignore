@@ -1,0 +1,18 @@
+# Local agent harness and project-context files (kept on disk, not published)
+/.agents/
+/.claude/
+/AGENTS.md
+/CLAUDE.md
+/CLAUDE.local.md
+/DESIGN.md
+/docs/
+/scripts/review-preflight.sh
+build/
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+*.xcresult
+.ocr/
+ocr-output/
+premium-audit.json

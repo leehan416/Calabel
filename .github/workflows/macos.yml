@@ -1,0 +1,21 @@
+name: macOS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: macos-26
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run deterministic checks
+        run: ./scripts/test.sh && ./scripts/check.sh
+      - name: Build app bundle
+        run: ./scripts/build-app.sh
